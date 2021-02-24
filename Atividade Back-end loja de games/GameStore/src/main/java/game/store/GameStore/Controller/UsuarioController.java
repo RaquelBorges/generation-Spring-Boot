@@ -44,7 +44,7 @@ public class UsuarioController {
 	@PostMapping
 	public ResponseEntity<Usuario> postUsuario (@RequestBody Usuario usuario)
 	{
-		return ResponseEntity.status(HttpStatus.CREATED).body(usuarioRepository.save(usuario));
+		return 	ResponseEntity.status(HttpStatus.CREATED).body(usuarioRepository.save(usuario));
 	}
 	
 	@PutMapping
@@ -53,7 +53,7 @@ public class UsuarioController {
 		return ResponseEntity.status(HttpStatus.CREATED).body(usuarioRepository.save(usuario));
 	}
 	
-	@DeleteMapping
+	@DeleteMapping ("/{id}")
 	public void deleteUsuario (@PathVariable Long id)
 	{
 		usuarioRepository.deleteById(id);
