@@ -19,7 +19,7 @@ public class Usuario {
 	@NotNull @Size(min=6, max = 50, message = "Tamanho entre 6 e 50")
 	private String usuario;
 	
-	@NotNull @Size(min=8, max = 200)
+	@NotNull @Size(min=8)
 	private String senha;
 
 	public Long getId() {
